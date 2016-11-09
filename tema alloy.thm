@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha">
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="ACTIVE"/>
+   <type name="AVAILABLE"/>
+   <type name="EMPTY"/>
+   <type name="EXPIRED"/>
+   <type name="UNAVAILABLE"/>
+   <type name="univ"/>
+   <type name="USED"/>
+   <type name="seq/Int"/>
+   <set name="$noReservationActive_r1" type="Reservation"/>
+   <set name="$noReservationActive_r2" type="Reservation"/>
+   <set name="$noReservationActive_r3" type="Reservation"/>
+</node>
+
+<node color="Black">
+   <type name="SafeArea"/>
+</node>
+
+<node shape="Diamond">
+   <type name="CHParkingLot"/>
+</node>
+
+<node shape="Ellipse" color="Yellow">
+   <type name="Car"/>
+</node>
+
+<node shape="Inv Triangle" color="Red">
+   <type name="RegisteredUser"/>
+</node>
+
+<node shape="Lined Diamond" color="Gray">
+   <type name="Reservation"/>
+</node>
+
+<node shape="Parallelogram" color="Green">
+   <type name="ParkingLot"/>
+</node>
+
+<node visible="no">
+   <type name="CarStatus"/>
+   <type name="Int"/>
+   <type name="LotStatus"/>
+   <type name="ReservationStatus"/>
+   <type name="String"/>
+   <type name="open$3/Ord"/>
+   <type name="open$4/Ord"/>
+   <type name="ordering/Ord"/>
+</node>
+
+<node visible="no" color="Green">
+   <type name="ValidString"/>
+</node>
+
+<node visible="no" color="Yellow">
+   <type name="Supervisor"/>
+</node>
+
+<node visible="no" shape="Box" color="Blue">
+   <type name="Position"/>
+</node>
+
+<node visible="yes" shape="Hexagon" color="White">
+   <type name="ReservationDB"/>
+</node>
+
+<edge color="Gray" constraint="no">
+   <relation name="Next"> <type name="open$3/Ord"/> <type name="LotStatus"/> <type name="LotStatus"/> </relation>
+   <relation name="Next"> <type name="open$4/Ord"/> <type name="ReservationStatus"/> <type name="ReservationStatus"/> </relation>
+   <relation name="Next"> <type name="ordering/Ord"/> <type name="CarStatus"/> <type name="CarStatus"/> </relation>
+</edge>
+
+<edge color="Gray" visible="no" attribute="yes" constraint="no">
+   <relation name="carStatus"> <type name="Car"/> <type name="CarStatus"/> </relation>
+   <relation name="First"> <type name="open$3/Ord"/> <type name="LotStatus"/> </relation>
+   <relation name="First"> <type name="open$4/Ord"/> <type name="ReservationStatus"/> </relation>
+   <relation name="First"> <type name="ordering/Ord"/> <type name="CarStatus"/> </relation>
+   <relation name="reservationStatus"> <type name="Reservation"/> <type name="ReservationStatus"/> </relation>
+   <relation name="status"> <type name="ParkingLot"/> <type name="LotStatus"/> </relation>
+</edge>
+
+<edge visible="no">
+   <relation name="creditCard"> <type name="RegisteredUser"/> <type name="Int"/> </relation>
+   <relation name="position_x"> <type name="Position"/> <type name="Int"/> </relation>
+   <relation name="position_y"> <type name="Position"/> <type name="Int"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="carID"> <type name="Car"/> <type name="Int"/> </relation>
+   <relation name="position"> <type name="Car"/> <type name="Position"/> </relation>
+   <relation name="position"> <type name="ParkingLot"/> <type name="Position"/> </relation>
+   <relation name="position"> <type name="RegisteredUser"/> <type name="Position"/> </relation>
+   <relation name="reservationID"> <type name="Reservation"/> <type name="Int"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
