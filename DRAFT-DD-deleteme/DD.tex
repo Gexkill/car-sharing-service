@@ -1,0 +1,327 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                   %
+%                           TESI in LaTex                           %
+%                                                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             Preambolo                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Documento pronto da stampare
+\documentclass[a4paper,12pt,oneside]{report}
+% Documento di brutta (al poste delle immagine una X)
+%\documentclass[draft,a4paper,12pt,oneside]{report}
+
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+% Imposto la lingua italiana
+% Imposto la lingua inglese
+\usepackage[english]{babel}
+
+
+% Settaggio dei margini 
+\topmargin 0cm 
+\headsep 1cm 
+\headheight 0.6cm
+\textwidth 14.6cm
+\textheight 21.8cm
+\evensidemargin 1cm 
+\oddsidemargin 1cm
+
+% Pacchetti da includere per...
+
+% simboli matematici
+\usepackage{amsmath}                       
+
+% simboli vari
+\usepackage{textcomp}                      
+\usepackage[mathscr]{euscript}
+
+% figure 
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+% intestazioni
+\usepackage{fancyhdr}
+
+% encoding dei caratteri
+\usepackage[ansinew]{inputenc}
+\usepackage[OT1]{fontenc}
+
+% ridefinire le didascalie
+\usepackage[footnotesize,hang,bf]{caption2}
+
+% riferimenti cliccabili nel pdf
+\usepackage[pdftex]{hyperref} 
+
+% commenti su più righe
+\usepackage{verbatim}
+
+% Impostazione dei link nel pdf
+\hypersetup{%
+    bookmarks=true,%
+    colorlinks=false,%
+    citebordercolor=0,%
+    linkbordercolor=0,%
+    urlbordercolor=0,%
+}       
+
+% colori testo
+%\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+
+% Stile della pagina
+\fancyhead[L]{\chaptername \thechapter}
+\fancyhead[LO]{\thesection} \fancyhead[RO]{\sectionmark}
+\lhead{\slshape Ch. \thechapter}
+
+
+% Configurazioni varie
+
+% nonumchapter serve per introduzioni, prefazioni, ecc.
+% titola come un capitolo ma senza numero
+\def\nonumchapter#1{
+	\chapter*{#1}
+	\addcontentsline{toc}{chapter}{#1}
+}
+
+% estensioni e cartella delle immagini (non necessario...)
+\DeclareGraphicsExtensions{gif,eps}
+\graphicspath{{./eps/}}
+
+% crea una nuova lunghezza e gli assegna un valore
+\newlength{\defbaselineskip}
+\setlength{\defbaselineskip}{\baselineskip}
+
+% comando per settare  la variabile \baselineskip come multiplo di \defbaselineskip
+\newcommand{\setlinespacing}[1]%
+           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+
+% permette l'inserimento "rapido" del virgolettato (ad es. per citazioni)
+\newcommand{\virgolette}[1]{``#1''}
+
+% definizione dello stile delle didascalie delle immagini
+\renewcommand{\captionfont}{%
+	\normalfont \sffamily \slshape \footnotesize%
+}
+
+% questo ambiente serve per i log e codice sorgente:
+% riduce il carattere la dimensione dei font e imposta l'ambiente 
+% come verbatim per evitare l'interpretazione di caratteri speciali
+\newenvironment{logs}{\begin{flushleft}\begin{ttfamily}\scriptsize\setlinespacing{1}}{\end{ttfamily}\end{flushleft}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         Inizio Documento                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+% Inizio del Frontespizio
+
+\thispagestyle{empty}
+\enlargethispage{60mm}
+\begin{center}
+\Large{\textsc{Politecnico di Milano}}\\
+\vspace{5mm}
+%\large{V Facolt\`a di Ingegneria}\\
+%\vspace{5mm}
+\large{Computer Science and Engineering's master degree course }\\
+%\large{Dipartimento di Elettronica e Informazione}\\
+\vspace{10mm}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=30mm]{images/logo_poli.png}
+\end{center}
+\end{figure}
+\vspace{5mm}
+
+\begin{LARGE}
+\textbf{PowerEnjoy}
+\end{LARGE}
+\\
+% titolo della tesi
+\begin{LARGE}
+Design Document
+\end{LARGE}
+\vspace{30mm}
+
+% relatore
+\begin{flushleft}
+\begin{tabular}{l l }
+\textbf{Version 1.0}\\\\
+Release Date: 11/12/2016\\\\
+%Relatore:    & Prof. Pinco PALLINO\\
+Customer: Eng. Elisabetta DI NITTO
+\end{tabular}
+\end{flushleft}
+\vspace{30mm}
+
+% autore/autori
+\begin{flushright}
+\begin{tabular}{l l}
+%Tesi di Laurea di: & \\
+Authors:\\
+Eng. Marco FERNI & Id. 877712\\
+Eng. Angelo Claudio RE & Id. 877808 \\
+Eng. Gabriele TERMIGNONE & Id. 877645 \\
+\end{tabular}
+\end{flushright}
+\vfill
+{\large{\bf Anno Accademico 2016-2017}}
+\end{center}
+
+% Fine del Frontespizio
+
+
+\clearpage
+\newpage
+
+
+% Settaggio interlinea 
+\setlinespacing{1.5}
+
+
+% Inizio Numerazione Romana
+\pagenumbering{Roman}
+
+
+% Indice
+\tableofcontents
+\newpage
+\clearpage
+
+
+% Elenco delle Figure
+%\addcontentsline{toc}{section}{\listfigurename}
+%\listoffigures
+%\clearpage
+
+
+% Impostazioni della pagina
+\pagestyle{fancy} 
+\headsep=40pt 
+\lhead{} 
+\rhead{\slshape \leftmark} 
+\cfoot{\thepage}
+
+
+% Sommario (1 pagina)
+% [Includo il file abstract.tex]
+\include{abstract}
+
+
+% Inizio Numerazione Araba
+\pagenumbering{arabic}
+
+%section style
+\renewcommand\thesection{\Alph{section}}
+
+% Vari Capitoli
+% [Includo i vari file chapterN.tex]
+
+% \include{chapter1}   % Introduzione (7-8 pagine)
+\chapter{Introduction}
+\section{Purpose}
+This document extends the PowerEnjoy's RASD by providing a functional description of the system and more technical details.An overview of the system's design will be given through UML's Component, Deployment and Sequence diagrams, and we'll elaborate more on the User Interface part  via the explanation of some already exposed mockups.The interactions between components, the deployment cycle and the runtime behavior of the system will be discussed, aiming to reach a level of description detailed enough for the software development to proceed with an understating of what are the software and hardware choices to be taken and how the system should be built.
+\newpage
+\section{Scope}
+PowerEnjoy's main goal is to help people move around easier, without having to rely on their personal transport; a secondary goal is to reduction of cities' pollution and acoustic noise.To utilize Power Enjoy, a user need to successfully complete a registration procedure, in which he's asked to insert his IDs and driving licenses, together with some personal data.The system allows the now registered user to rent a car for a limited amount of time.The user can now start to look for a car by entering either his current position (detected by using their smartphone's GPS) or a specific location, chosen on the map, that he'll need to reach by himself.Frauds mechanism, like the 1 EUR fee, are applied to prevent abuse.The system policies encourage a smarter use of our service, by offering discounts to those who share a trip together. Users are also strongly suggested to leave a car in or near a PowerEnjoy's parking lot.
+\newpage
+\section{Definitions, Acronyms, Abbreviations}
+\begin{itemize}
+\item \emph{Cost of the Trip}: raw price of the service calculated only on the base of the duration of the car's usage, before discounts or additional charges are applied.\item \emph{Virtuousness coefficient}: the factor by which to multiply the cost of the trip to get the amount of the bill. Its initial value is 1.\item \emph{Supervisor}: a company employee who work at the Car hub controller.\item \emph{Recharge on site}: a company procedure: a worker is sent to recharge a low car that was parked detached from the power grid.\item \emph{Car recovery}: a worker is sent to retrieve a car that has been forgotten outside a safe area and move that car into in one of these lot.\item \emph{Guest}: a person who is not already registered to the system.\item \emph{User}: a registered customer.\item \emph{RASD}: Requirement Analysis and Specification Document\item \emph{DD}: Design Document\item \emph{DB}: Database\item \emph{ER Diagram}: Entity Relation Diagram
+\end{itemize}
+\newpage
+\section{Reference Documents}
+\newpage
+\section{Document Structure}
+
+\chapter{Arhitectural Design}
+\section{Overview}
+\subsection{General Structure}
+\subsection{High level components and their interaction}
+\newpage
+\section{Component view}
+\subsection{DB Component and Interface}
+\subsection{Safe park lot Component}
+\subsection{User Component and Interface}
+\subsection{Authentication handler component and interface}
+\subsection{Reservation component and interface}
+\subsection{Car Component and interface}
+\newpage
+\section{Deployment view}
+\newpage
+\section{Runtime view}
+\newpage
+\section{Component interfaces}
+\newpage
+\section{Selected architectural styles and patterns}
+\newpage
+\section{Other design decisions}
+
+\chapter{Algorithm Design}
+
+\chapter{User Interface Design}
+
+\chapter{Requirements Traceability}
+
+\chapter{Effort Spent}
+\begin{tabular}{|c| c| c| c|}
+\hline
+\textbf{\large{Date}} 
+& \textbf{\large{Marco (h)}} 
+& \textbf{\large{Angelo (h)}} 
+& \textbf{\large{Gabriele (h)}}\\
+\hline
+16/11/2016 & & 0.5 & \\
+\hline
+21/11/2016 & & & 1\\
+\hline
+22/11/2016 & & & 1\\
+\hline
+29/11/2016 & 6 & 4 & 4\\
+\hline
+30/11/2016 & 5 & & 3\\
+\hline
+01/12/2016 & 0.5 & & 6\\
+\hline
+02/12/2016 & 5 & & 5\\
+\hline
+03/12/2016 & & 1.5 & \\
+\hline
+\textbf{TOTAL} & 16.5 & 6 & 20\\
+\hline
+\end{tabular}
+
+\chapter{References}
+
+% Bibliografia
+
+\clearpage
+
+% Decommentare per include la bibliografia non citata
+%\newpage\nocite{*}
+
+% Decommentare se si vuole usare lo site IEEE 
+% per maggiori info si veda http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%\bibliographystyle{IEEEtran}
+
+\clearpage\addcontentsline{toc}{chapter}{\bibname} \lhead{}
+\rhead{\slshape BIBLIOGRAPHY}
+
+% [prende la bibliografia dal file biblio.bib]
+\bibliography{biblio}  
+
+
+% Fine del documento
+
+\end{document}
+
