@@ -19,7 +19,6 @@ Documentation to develop a digital management system for a car-sharing service t
 
 ##Deadlines
 
-|---------------------|----------------------|
 | Document            | Date                 |
 |---------------------|----------------------|
 | Group registration  | 16/10/2016           |
