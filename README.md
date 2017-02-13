@@ -3,6 +3,7 @@
 Documentation to develop a digital management system for a car-sharing service that exclusively employs electric cars
 
 ###Documentation
+
 * RASD
    * [RASD PDF](releases/RASD/V1.1/RASD.pdf): it cannot be  updated
 * DD
@@ -13,8 +14,38 @@ Documentation to develop a digital management system for a car-sharing service t
    * [ITPD PDF](releases/ITPD/V1.0/ITPD.pdf): it cannot be  updated
 * PP
    * [PP PDF](releases/PP/V1.0/PP.pdf): it cannot be  updated
+* Keynote
+   * [Keynote pptx][releases/Keynote]
+
+##Deadlines
+|---------------------|----------------------|
+| Name                | Date                 |
+|---------------------|----------------------|
+| Group registration  | 16/10/2016           |
+|---------------------|----------------------|
+| RASD                | 13/11/2016           |
+|---------------------|----------------------|
+| DD                  | 11/12/2016           |
+|---------------------|----------------------|
+| ITPD                | 15/01/2017           |
+|---------------------|----------------------|
+| PP                  | 22/01/2017           |
+|---------------------|----------------------|
+| CI                  | 05/02/2017           |
+|---------------------|----------------------|
+| Final presentation  | 20/02/2017 - h10.00  |
+|---------------------|----------------------|
+
+* Group registration 16/10/2016
+* RASD 13/11/2016 
+* DD submission  11/12/2016 
+* Testing document  15/01/2017
+* Project management 22/01/2017 
+* Code inspection 05/02/2017 
+* Final presentation 20/02/2017 - h10.00
 
 ##Group Members
+
 * Marco Ferni
 * Angelo Claudio Re
 * Gabriele Termignone
