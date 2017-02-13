@@ -29,14 +29,6 @@ Documentation to develop a digital management system for a car-sharing service t
 | CI                  | 05/02/2017           |
 | Final presentation  | 20/02/2017 - h10.00  |
 
-* Group registration 16/10/2016
-* RASD 13/11/2016 
-* DD submission  11/12/2016 
-* Testing document  15/01/2017
-* Project management 22/01/2017 
-* Code inspection 05/02/2017 
-* Final presentation 20/02/2017 - h10.00
-
 ##Group Members
 
 * Marco Ferni
