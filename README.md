@@ -15,7 +15,7 @@ Documentation to develop a digital management system for a car-sharing service t
 * PP
    * [PP PDF](releases/PP/V1.0/PP.pdf): it cannot be  updated
 * Keynote
-   * [Keynote pptx](releases/Keynote/readme.md)
+   * [Keynote pptx](releases/keynote/readme.md)
 
 ##Deadlines
 
