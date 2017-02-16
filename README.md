@@ -21,7 +21,7 @@ Documentation to develop a digital management system for a car-sharing service t
 
 | Document            | Date                 |
 |---------------------|----------------------|
-|~~Group registration | 16/10/2016~~         |
+|~~Group registration~~ | ~~16/10/2016~~         |
 | ~~RASD              | 13/11/2016~~         |
 | ~~DD                | 11/12/2016~~         |
 | ~~ITPD              | 15/01/2017~~         |
