@@ -19,15 +19,15 @@ Documentation to develop a digital management system for a car-sharing service t
 
 ##Deadlines
 
-| Document            | Date                 |
-|---------------------|----------------------|
+| Document              | Date                   |
+|-----------------------|------------------------|
 |~~Group registration~~ | ~~16/10/2016~~         |
-| ~~RASD              | 13/11/2016~~         |
-| ~~DD                | 11/12/2016~~         |
-| ~~ITPD              | 15/01/2017~~         |
-| ~~PP                | 22/01/2017~~         |
-| ~~CI                | 05/02/2017~~         |
-| Final presentation  | 20/02/2017 - h10.00  |
+| ~~RASD~~              | ~~13/11/2016~~         |
+| ~~DD~~                | ~~11/12/2016~~         |
+| ~~ITPD~~              | ~~15/01/2017~~         |
+| ~~PP~~                | ~~22/01/2017~~         |
+| ~~CI~~                | ~~05/02/2017~~         |
+| Final presentation    |   20/02/2017 - h10.00  |
 
 ##Group Members
 
